@@ -83,6 +83,7 @@ Connect the boot pin to the GND pin and then connect the windows computer with a
 If you need to rewrite the program of K66, you should flash the DAP firmware. In normal use, you should flash the USB2TTL firmware.
 
 ==The firmware file link:==
+https://1drv.ms/u/s!Am_XlVpay_NluxBZZZdaQEs40CN8?e=gDYnaf
 
 ##### connection  
 
