@@ -1,12 +1,14 @@
 # keipua
 ## Control interface
 ### Original Control System:
-![fig1](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig1.png)<center>fig.1</center>    
+![fig1](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig1.png)
+
 The original robot was controlled by a joystick fixed on the robot, and the motor was controlled by detecting the status of the joystick and outputting PWM signals with different duty cycles (we have no access to modify the motor driver part).
 ---
 ### Modified Control System：
 #### System Overview  
-![fig2](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig2.png)<center>fig.2</center>  
+![fig2](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig2.png)
+
 As shown in the figure above, the modified system consists of a [gamepad](#jump0), a ROS PC, a [USB2TTL module](#jump1), a [K66 microcontroller](#jump2), and so on.   
 Below is an introduction to each module and their usage
 ---
@@ -30,7 +32,7 @@ then check the connection:
 $ ls /dev/input/
 ```
 
-![fig3](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig3.png)<center>fig.3</center>  
+![fig3](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig3.png)
 
 You will see a list of all input devices. If jsX appears (js0 is displayed in this terminal), ROS PC has successfully recognized your gamepad.  
 
@@ -52,7 +54,8 @@ Then we use the ROS PC send our command through [USB2TTL module](#jump1).
 #### <span id="jump1"> USB2TTL Module </span>
 ##### CP2102
 There are many USB2TTL modules on the market, the most commonly used is the CP2102 module.  
-![fig4](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig4.png)  <center>fig.4</center>  
+![fig4](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig4.png) 
+  
 If the DAP doesn't work well, youcan also use the CP2102 module to replace it.
  You just need modify some words in your scripts and program.
  ```bash
@@ -74,16 +77,20 @@ If the DAP doesn't work well, youcan also use the CP2102 module to replace it.
 ##### DAP
 We chose to use a DAP module that can burn different firmware  
 
-![fig5](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig5.png)<center>fig.5</center>  
+![fig5](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig5.png)
+ 
 Connect the boot pin to the GND pin and then connect the windows computer with a data cable. You can program the firmware for this module.  
 If you need to rewrite the program of K66, you should flash the DAP firmware. In normal use, you should flash the USB2TTL firmware.
 
 ==The firmware file link:==
 
-##### connection
+##### connection  
+
 You need to connect the TX pin of the USB2TTL module to the RX(PTA1) pin of the microcontroller and the RX pin of the USB2TTL module to the TX(PTA2) pin of the microcontroller.  
 If you are using DAP, just connect them as fig.5.
-![fig6](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig6.png)<center>fig.6</center>    
+
+![fig6](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig6.png)
+
 ---
 #### <span id="jump2"> NXP K66 Microcontroller </span>
 
