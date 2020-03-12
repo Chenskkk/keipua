@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="keipua" type="automatic" name="automatic" output="screen"/>
+</launch>
