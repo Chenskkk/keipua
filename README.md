@@ -75,7 +75,7 @@ If the DAP doesn't work well, youcan also use the CP2102 module to replace it.
 ---
 
 ##### DAP
-We chose to use a DAP module that can burn different firmware  
+We choose DAP module so that we could flash different firmwares for it. 
 
 ![fig5](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig5.png)
  
