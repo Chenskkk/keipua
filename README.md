@@ -1,5 +1,5 @@
 # keipua
-## useage
+## Installiation
 ```bash
 $ sudo apt-get install jsk-recognition-msgs ros-$ROS_DISTRO-serial ros-$ROS_DISTRO-joy
 $ cd ~/catkin_ws/src
