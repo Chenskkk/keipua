@@ -1,4 +1,13 @@
 # keipua
+## useage
+```bash
+$ sudo apt-get install jsk-recognition-msgs ros-$ROS_DISTRO-serial ros-$ROS_DISTRO-joy
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/Chenskkk/autoware_msgs.git
+$ git clone https://github.com/Chenskkk/keipua.git
+$ cd ..
+$ catkin_make -DCMAKE_BUILD_TYPE=Release
+```
 ## Control interface
 ### Original Control System:
 ![fig1](https://chensk-1255425596.cos.ap-beijing.myqcloud.com/tsukuba/fig1.png)
